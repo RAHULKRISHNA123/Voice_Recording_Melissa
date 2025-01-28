@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Georgie Agent</title>
+    </head>
+    <body>
+        <!-- Container for the Voice Agent widget -->
+        <div style="width: 100%; height: 100%;" id="AGENT_CONTAINER">
+            <!-- Here is where TIXAE Agents renders the widget. -->
+            <!-- Set width, height to 100% to occupy the full screen -->
+        </div>
+
+        <script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6799524fafd1b354c3059120' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          render: {
+            mode: 'embedded',
+            target: document.getElementById('AGENT_CONTAINER'),
+          },
+          autostart: false
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; 
+      v.type = "text/javascript"; 
+      s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+
+    </body>
+</html>
